@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import ProtectedRoute from './components/ProtectedRoute';
+import TaskDetails from './pages/TaskDetails';
 
 const App = () => (
     <Router>
@@ -16,6 +17,7 @@ const App = () => (
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+            <Route path="/tasks/:id" element={<ProtectedRoute><TaskDetails /></ProtectedRoute>} />
         </Routes>
         <Footer />
         </div>
